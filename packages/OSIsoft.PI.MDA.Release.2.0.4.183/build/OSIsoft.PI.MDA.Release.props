@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Condition="'$(Platform)' == 'x86'">
+      <ContentWithTargetPath Include="$(MSBuildThisFileDirectory)..\build\native\lib\x86\PIInterop.dll">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		 <TargetPath>PIInterop.dll</TargetPath>
+      </ContentWithTargetPath>
+   </ItemGroup>
+   <ItemGroup Condition="'$(Platform)' == 'x64'">
+      <ContentWithTargetPath Include="$(MSBuildThisFileDirectory)..\build\native\lib\x64\PIInterop.dll">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		 <TargetPath>PIInterop.dll</TargetPath>
+      </ContentWithTargetPath>
+   </ItemGroup>
+   <ItemGroup Condition="'$(Platform)' == 'AnyCPU'">
+      <ContentWithTargetPath Include="$(MSBuildThisFileDirectory)..\build\native\lib\x64\PIInterop.dll">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		 <TargetPath>PIInterop.dll</TargetPath>
+      </ContentWithTargetPath>
+   </ItemGroup>
+   <ItemGroup>
+      <Content Include="$(MSBuildThisFileDirectory)..\tools\tracing\OSIsoft.PI.Tracing.dll">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+	  <Content Include="$(MSBuildThisFileDirectory)..\tools\tracing\OSIsoft.PI.Tracing.man">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+   </ItemGroup>
+</Project>
+
